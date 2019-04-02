@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="view">
+    <div class="btns">
+        <button id="prev">Prev()</button>
+        <button id="go">Play() / Pause()</button>
+        <button id="next">Next()</button>
+    </div>
+    <div class="btns">
+        <button id="list">OpenList()</button>
+    </div>
+    <audio preload autoplay crossOrigin="anonymous" class="music-player" ></audio>
+    <div class='heh'>
+        <div class="mask"></div>
+        <div class="mask-above">
+            <div class="cp">
+                <canvas id="myCanvas1"></canvas>
+                <canvas id="myCanvas"></canvas>
+            </div>
+            <p id="name" class="name">歌曲名称</p>
+            <button class="play-way"><i class="fa fa-fw fa-retweet"></i></button>
+            <div class="progress-article">
+                <p class="date-view">1:00/4:00</p>
+                <div class="bg">
+                    <div class="color-article"></div>
+                    <div class="progress-round"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="set-volume-p">
+        <p>volume(1 - 10)</p>
+        <input class="set-volume" type="text" value="3">
+    </div>
+    <div class=""></div>
+    <div class="tips">
+        <ul>
+            <li><b>待完成: </b></li>
+            <li>- 播放列表</li>
+            <li>- 音量控制完善</li>
+            <li>- 歌单</li>
+            <li>- 主题风格</li>
+            <li>- 播放模式缓存</li>
+        </ul>
+    </div>
+
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

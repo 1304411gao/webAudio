@@ -1,0 +1,171 @@
+@import "mixin";
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Monaco;
+    @include userSelect;
+}
+.view{
+    width: 100%;
+    min-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 60px;
+
+}
+#myCanvas, #myCanvas1 {
+
+    position: relative;
+    z-index: 99;
+    float: left
+}
+
+button {
+    padding: 2px 15px;
+    background-image: linear-gradient(120deg, $themeColor1 0%, $activeColor1 100%);
+    border: none;
+    outline: none;
+    color: #000;
+    cursor: pointer;
+    @include boxShadow(0 0 5px rgba(#000, .19));
+    @include tsn;
+    &:hover{
+        background-image: linear-gradient(120deg, $activeColor1 0%, $themeColor1 100%);
+    }
+
+}
+
+.heh {
+    background-image: url(../img/bg1.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    text-align: center;
+    width: 80vw;
+    max-width: 900px;
+    min-width: 730px;
+    margin: 0 auto;
+    position: relative;
+
+    > .mask{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(#000, .7);
+    }
+    > .mask-above{
+        position: relative;
+        z-index: 10;
+    }
+}
+
+.cp {
+    display: inline-block;
+}
+.name{
+    color: #fff;
+    font-size: 14px;
+    line-height: 1em;
+    font-weight: bold;
+    line-height: 2.1em;
+    @include boxSizing;
+    height: 30px;
+}
+.btns{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.play-way{
+    padding: 6px;
+    line-height: 1em;
+    @include boxShadow(0 0 5px rgba(#fff, .19));
+    position: absolute;
+    bottom: 25px;
+    right: 10px;
+    z-index: 9;
+}
+.tips{
+    text-align: center;
+    margin-top: 40px;
+    color: #ea2222;
+    font-size: 13px;
+    text-align: center;
+    > ul{
+        text-align: left;
+        display: inline-block;
+
+        > li{
+            list-style: none;
+        }
+    }
+}
+.progress-article{
+    width: 100%;
+    padding: 5px 10px;
+    @include boxSizing;
+    position: relative;
+    
+    > p{
+        color: #aaa;
+        font-size: 12px;
+        text-align: left;
+        padding: 3px 0;
+    }
+    > .bg{
+        width: 100%;
+        height: 7px;
+        margin: 5px auto;
+        background-color: #ccc;
+        position: relative;
+        cursor: pointer;
+
+        > .color-article{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0%;
+            background-color: $themeColor1;
+            background-image: url(../img/color-article.gif);
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+        }
+
+        > .progress-round{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 12px;
+            height: 12px;
+            margin-top: -3px;
+            margin-left: -3px;
+            background-color: #fff;
+            @include borderR(50%);
+            @include boxShadow(0 0 10px rgba(#000, .3));
+            @include boxSizing;
+        }
+    }
+}
+.set-volume-p{
+    padding: 20px 0;
+    text-align: center;
+    font-size: 13px;
+    > p{
+        color: $themeColor1;
+        margin-bottom: 5px;
+    }
+}
+.set-volume{
+    display: block; margin: 0 auto;
+    outline: none;
+    padding: 3px 5px;
+    @include boxSizing;
+    width: 40px;
+    text-align: center;
+    font-size: 12px;
+    background-image: linear-gradient(120deg, $themeColor1 0%, $activeColor1 100%);
+}
